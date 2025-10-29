@@ -1,6 +1,4 @@
 require("dotenv").config();
-
-
 const development = {
   
     username: process.env.DB_USERNAME,
@@ -8,7 +6,7 @@ const development = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    "dialect": process.env.DB_DIALECT
+    dialect: process.env.DB_DIALECT
   };
   
   const test = {
@@ -17,7 +15,7 @@ const development = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    "dialect": process.env.DB_DIALECT
+    dialect: process.env.DB_DIALECT
   };
   
   const production = {
@@ -26,7 +24,7 @@ const development = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    "dialect": process.env.DB_DIALECT
+    dialect: process.env.DB_DIALECT
   };
   module.exports = { development, test, production };
 
