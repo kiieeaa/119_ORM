@@ -37,5 +37,21 @@ db.sequelize.sync()
             res.send({message: error.message});
         }
     });
+     app.put('/komik/:id', async (req, res) => {
+        const id = req.params.id;
+        const data = req.body;
+        try{
+            const komik = await db.Komik.findByPk(id);
+            if (!komik) {
+                return res.status(404).send({message: 'Komik not found'});
+            }
+            await komik.update(data);
+            res.send({message: "Komik berhasil di update", komik});
+        }
+        catch (error){
+            res.send({message: error.message});
+        }
+    });
+
 
 
